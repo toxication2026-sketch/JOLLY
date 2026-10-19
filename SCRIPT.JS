@@ -207,7 +207,9 @@ function startMusic() {
 }
 
 
-window.addEventListener("load", startMusic, { once: true });
+// Browsers block audible autoplay until the visitor interacts with the page.
+// startMusic() is called from the intro and music buttons below, where playback
+// is allowed by the user's gesture.
 
 
 if (musicToggle) {
